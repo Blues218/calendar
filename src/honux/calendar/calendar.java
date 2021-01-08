@@ -1,5 +1,7 @@
 package honux.calendar;
 
+import java.util.Scanner;
+
 public class calendar {
 
 	public static void main(String[] args) {
@@ -11,6 +13,12 @@ public class calendar {
 		System.out.println("22\t23\t24\t25\t26\t27\t28");
 		
 
+		//
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("달을 입력해주세요.");
+		int month = scanner.nextInt();
+		int[] maxDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		System.out.printf("%d월은 %d일까지 있습니다.\n", month,maxDays[month - 1]);
 	}
 
-}
+} 
